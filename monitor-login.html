@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>VoteTrack Monitor — Sign In</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#080b12;
+  --bg2:#0d1017;
+  --card:#141720;
+  --card2:#1a1e2e;
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(255,255,255,.14);
+  --accent:#6366f1;
+  --accent2:#818cf8;
+  --purple:#8b5cf6;
+  --green:#10b981;
+  --text:#f1f5f9;
+  --soft:#94a3b8;
+  --softer:#475569;
+  --red:#ef4444;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ── BACKGROUND ── */
+.bg-orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0}
+.orb1{
+  width:700px;height:700px;
+  top:-200px;left:50%;transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(99,102,241,.14) 0%,transparent 65%);
+}
+.orb2{
+  width:400px;height:400px;
+  bottom:-100px;left:-100px;
+  background:radial-gradient(circle,rgba(139,92,246,.1) 0%,transparent 65%);
+}
+.orb3{
+  width:350px;height:350px;
+  bottom:-100px;right:-80px;
+  background:radial-gradient(circle,rgba(6,182,212,.07) 0%,transparent 65%);
+}
+/* Dot grid */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(99,102,241,.12) 1px,transparent 1px);
+  background-size:36px 36px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 40%,black 20%,transparent 100%);
+}
+
+/* ── MAIN ── */
+main{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  padding:40px 20px;position:relative;z-index:1;
+}
+
+.login-wrap{
+  width:100%;max-width:420px;
+}
+
+/* Logo */
+.logo-block{text-align:center;margin-bottom:36px}
+.logo-icon{
+  width:68px;height:68px;border-radius:20px;
+  background:linear-gradient(135deg,var(--accent),var(--purple));
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;margin:0 auto 16px;
+  box-shadow:0 12px 40px rgba(99,102,241,.4);
+}
+.logo-name{font-size:24px;font-weight:900;letter-spacing:-.03em;margin-bottom:4px}
+.role-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);
+  color:var(--green);font-size:11px;font-weight:700;
+  padding:4px 12px;border-radius:99px;letter-spacing:.05em;text-transform:uppercase;
+}
+.role-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}
+
+/* Card */
+.card{
+  background:var(--card);
+  border:1px solid var(--border2);
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 32px 80px rgba(0,0,0,.6);
+  position:relative;overflow:hidden;
+}
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+
+.card-title{font-size:18px;font-weight:800;margin-bottom:6px;letter-spacing:-.02em}
+.card-sub{font-size:13px;color:var(--soft);margin-bottom:28px;line-height:1.6}
+
+/* Form */
+.field{margin-bottom:18px}
+.field label{
+  display:block;font-size:12px;font-weight:700;
+  color:var(--soft);text-transform:uppercase;letter-spacing:.07em;
+  margin-bottom:8px;
+}
+.field input{
+  width:100%;padding:13px 14px;
+  background:var(--bg2);
+  border:1.5px solid var(--border2);
+  border-radius:11px;
+  color:var(--text);font-size:15px;
+  font-family:'Inter',sans-serif;
+  outline:none;transition:border-color .2s,box-shadow .2s;
+  -webkit-appearance:none;
+}
+.field input::placeholder{color:var(--softer)}
+.field input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(99,102,241,.15);
+}
+.field input.error{border-color:var(--red)}
+
+.error-msg{
+  font-size:12px;color:var(--red);margin-top:6px;
+  display:none;align-items:center;gap:4px;
+}
+.error-msg.show{display:flex}
+
+/* Submit button */
+.submit-btn{
+  width:100%;padding:15px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--purple));
+  color:#fff;font-size:15px;font-weight:700;
+  font-family:'Inter',sans-serif;
+  border:none;cursor:pointer;
+  box-shadow:0 8px 28px rgba(99,102,241,.4);
+  transition:transform .2s,box-shadow .2s,opacity .2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:8px;
+  -webkit-appearance:none;
+}
+.submit-btn:hover{transform:translateY(-1px);box-shadow:0 12px 36px rgba(99,102,241,.5)}
+.submit-btn:active{transform:translateY(0)}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+/* Spinner */
+.spinner{
+  width:16px;height:16px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.3);
+  border-top-color:#fff;
+  animation:spin .7s linear infinite;display:none;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Info row */
+.info-row{
+  display:flex;align-items:flex-start;gap:10px;
+  background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.15);
+  border-radius:10px;padding:12px 14px;
+  margin-top:20px;
+}
+.info-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.info-text{font-size:12px;color:var(--soft);line-height:1.6}
+.info-text strong{color:var(--accent2)}
+
+/* What you can see */
+.perms{
+  margin-top:28px;padding-top:20px;
+  border-top:1px solid var(--border);
+}
+.perms-title{font-size:11px;font-weight:700;color:var(--softer);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.perm-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;color:var(--soft);
+  padding:7px 0;border-bottom:1px solid var(--border);
+}
+.perm-item:last-child{border-bottom:none}
+.perm-ico{
+  width:28px;height:28px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:13px;
+}
+.perm-ico.yes{background:rgba(16,185,129,.12)}
+.perm-ico.no{background:rgba(239,68,68,.08)}
+
+/* FOOTER */
+footer{
+  position:relative;z-index:1;
+  text-align:center;padding:20px;
+  font-size:12px;color:var(--softer);
+  border-top:1px solid var(--border);
+}
+footer a{color:var(--softer);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--soft)}
+
+@media(max-width:480px){
+  .card{padding:24px 20px}
+  .logo-icon{width:56px;height:56px;font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+<div class="bg-orb orb3"></div>
+
+<main>
+  <div class="login-wrap">
+
+    <!-- Logo -->
+    <div class="logo-block">
+      <div class="logo-icon">🗳️</div>
+      <div class="logo-name">VoteTrack</div>
+      <div style="margin-top:10px">
+        <span class="role-badge"><span class="role-dot"></span> Monitor Access</span>
+      </div>
+    </div>
+
+    <!-- Login Card -->
+    <div class="card">
+      <div class="card-title">Sign in to Monitor</div>
+      <div class="card-sub">Enter your credentials provided by your election administrator to access the live monitor view.</div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            autocomplete="email"
+            inputmode="email"
+            required
+          />
+          <div class="error-msg" id="emailErr">⚠ Please enter a valid email address</div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required
+          />
+          <div class="error-msg" id="passErr">⚠ Password is required</div>
+        </div>
+
+        <div class="error-msg" id="authErr" style="margin-bottom:12px;font-size:13px">
+          ⚠ <span id="authErrText">Invalid credentials. Please check your email and password.</span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <div class="spinner" id="spinner"></div>
+          <span id="btnLabel">Sign In</span>
+        </button>
+      </form>
+
+      <div class="info-row">
+        <div class="info-icon">ℹ️</div>
+        <div class="info-text">
+          <strong>Monitor access is by invitation only.</strong> Your credentials are issued by your election administrator. If you don't have credentials, contact <a href="mailto:dave@votetrack.net" style="color:var(--accent2)">dave@votetrack.net</a>.
+        </div>
+      </div>
+
+      <!-- What monitor can see -->
+      <div class="perms">
+        <div class="perms-title">What you can access</div>
+        <div class="perm-item">
+          <div class="perm-ico yes">📊</div>
+          Live voter turnout by area
+        </div>
+        <div class="perm-item">
+          <div class="perm-ico yes">📋</div>
+          Real-time activity log
+        </div>
+        <div class="perm-item">
+          <div class="perm-ico yes">👥</div>
+          Voter list (read-only)
+        </div>
+        <div class="perm-item">
+          <div class="perm-ico no">🚫</div>
+          <span style="color:var(--softer)">Cannot edit, submit, or modify any data</span>
+        </div>
+        <div class="perm-item">
+          <div class="perm-ico no">🚫</div>
+          <span style="color:var(--softer)">Cannot export or download voter data</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a>
+  &nbsp;·&nbsp;
+  <a href="index.html">About VoteTrack</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:dave@votetrack.net">Support</a>
+  <div style="margin-top:6px">© 2025 VoteTrack</div>
+</footer>
+
+<script>
+const form      = document.getElementById('loginForm')
+const emailInp  = document.getElementById('email')
+const passInp   = document.getElementById('password')
+const emailErr  = document.getElementById('emailErr')
+const passErr   = document.getElementById('passErr')
+const authErr   = document.getElementById('authErr')
+const authErrTx = document.getElementById('authErrText')
+const spinner   = document.getElementById('spinner')
+const btnLabel  = document.getElementById('btnLabel')
+const submitBtn = document.getElementById('submitBtn')
+
+function validateEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) }
+
+emailInp.addEventListener('input', () => {
+  emailInp.classList.remove('error')
+  emailErr.classList.remove('show')
+  authErr.classList.remove('show')
+})
+passInp.addEventListener('input', () => {
+  passInp.classList.remove('error')
+  passErr.classList.remove('show')
+  authErr.classList.remove('show')
+})
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  let valid = true
+
+  if (!validateEmail(emailInp.value.trim())) {
+    emailInp.classList.add('error')
+    emailErr.classList.add('show')
+    valid = false
+  }
+  if (!passInp.value.trim()) {
+    passInp.classList.add('error')
+    passErr.classList.add('show')
+    valid = false
+  }
+  if (!valid) return
+
+  // Show loading state
+  submitBtn.disabled = true
+  spinner.style.display = 'block'
+  btnLabel.textContent = 'Signing in…'
+  authErr.classList.remove('show')
+
+  try {
+    // Firebase Authentication
+    const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js')
+    const { getAuth, signInWithEmailAndPassword } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js')
+
+    const app  = initializeApp({
+      apiKey:            "AIzaSyExample",
+      authDomain:        "votetrack-11e7e.firebaseapp.com",
+      projectId:         "votetrack-11e7e",
+    })
+    const auth = getAuth(app)
+    const cred = await signInWithEmailAndPassword(auth, emailInp.value.trim(), passInp.value)
+
+    // Redirect to monitor app
+    window.location.href = 'https://votetrack.web.app/monitor'
+
+  } catch (err) {
+    let msg = 'Invalid credentials. Please check your email and password.'
+    if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again later.'
+    if (err.code === 'auth/network-request-failed') msg = 'Network error. Please check your connection.'
+    authErrTx.textContent = msg
+    authErr.classList.add('show')
+  } finally {
+    submitBtn.disabled = false
+    spinner.style.display = 'none'
+    btnLabel.textContent = 'Sign In'
+  }
+})
+</script>
+</body>
+</html>
