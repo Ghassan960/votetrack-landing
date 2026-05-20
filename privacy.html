@@ -190,13 +190,13 @@ footer{
     <h1>Privacy Policy</h1>
     <div class="meta">
       <span>Effective date:</span> April 28, 2025 &nbsp;·&nbsp;
-      <span>Last updated:</span> April 28, 2025 &nbsp;·&nbsp;
-      <span>Version:</span> 1.0
+      <span>Last updated:</span> May 20, 2025 &nbsp;·&nbsp;
+      <span>Version:</span> 2.0
     </div>
   </div>
 
   <div class="highlight">
-    <strong>Short version:</strong> VoteTrack is a campaign management tool. The Monitor role (available on the App Store) is strictly read-only — it does not collect, store, or transmit any personal information from your device. We take your privacy seriously.
+    <strong>Short version:</strong> VoteTrack is an organizational voting and event management tool for private groups such as university student councils, clubs, associations, and NGOs. The Monitor role (available on the App Store) allows authorized users to search participant lists and record check-in status. The app temporarily caches participant data on-device for offline use — this cache is automatically cleared on logout or account deletion. We take your privacy seriously.
   </div>
 
   <!-- TABLE OF CONTENTS -->
@@ -206,12 +206,13 @@ footer{
       <li><a href="#overview">Overview</a></li>
       <li><a href="#who">Who We Are</a></li>
       <li><a href="#data-collected">Information We Collect</a></li>
+      <li><a href="#data-accessed">Participant Data Accessed by Monitor</a></li>
       <li><a href="#how-used">How We Use Your Information</a></li>
       <li><a href="#third-party">Third-Party Services</a></li>
       <li><a href="#data-retention">Data Retention</a></li>
       <li><a href="#children">Children's Privacy</a></li>
       <li><a href="#security">Security</a></li>
-      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#your-rights">Your Rights &amp; Account Deletion</a></li>
       <li><a href="#changes">Changes to This Policy</a></li>
       <li><a href="#contact">Contact Us</a></li>
     </ol>
@@ -221,7 +222,7 @@ footer{
   <div class="section" id="overview">
     <h2><span class="ico">📋</span> 1. Overview</h2>
     <p>This Privacy Policy describes how <strong>VoteTrack</strong> ("we", "our", or "us") handles information when you use our application and website.</p>
-    <p>VoteTrack is a real-time election campaign management platform. Access to the platform is granted exclusively by invitation from an election administrator. The version available on the Apple App Store is the <strong>Monitor role only</strong> — a read-only view of live voter turnout and election activity. Monitors cannot submit, modify, or transmit any personal data through the app.</p>
+    <p>VoteTrack is an organizational voting and event management tool for private groups such as university student councils, clubs, associations, and NGOs. Access to the platform is granted exclusively by invitation from an event organizer. The version available on the Apple App Store is the <strong>Monitor role only</strong>. Monitors search a participant list and record when a participant has checked in — this action writes a check-in record to our secure database.</p>
     <p>By using VoteTrack, you agree to the practices described in this Privacy Policy.</p>
   </div>
 
@@ -245,7 +246,7 @@ footer{
     <h2><span class="ico">🗃️</span> 3. Information We Collect</h2>
 
     <p><strong>For the Monitor App (App Store version):</strong></p>
-    <p>The Monitor app is a read-only dashboard. It requires only your account credentials (provided to you by an election administrator) to authenticate. Beyond authentication, <strong>the Monitor app does not collect any personal information from your device</strong>.</p>
+    <p>The Monitor app requires your account credentials (provided by an event organizer) to authenticate. The app downloads a participant list to your device for offline use. This list may include participant names, ID numbers, addresses, and location assignments. This data is stored in encrypted local device storage and is automatically cleared when you log out or delete your account.</p>
 
     <table class="data-table">
       <thead>
@@ -287,14 +288,33 @@ footer{
           <td>App stability only — no personal data included</td>
         </tr>
         <tr>
-          <td><strong>Voter / election data viewed</strong></td>
-          <td>Read-only</td>
-          <td>Displayed to you on screen — not stored on your device</td>
+          <td><strong>Participant data (names, ID numbers, addresses)</strong></td>
+          <td>Yes — cached locally</td>
+          <td>Downloaded to your device for offline use. Automatically deleted on logout or account deletion.</td>
+        </tr>
+        <tr>
+          <td><strong>Check-in records written</strong></td>
+          <td>Yes — written to server</td>
+          <td>When you mark a participant as checked in, a record is written to our database containing participant ID, timestamp, and your monitor name.</td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong>For web platform users (non-App Store):</strong> Admin, Candidate, Agent, and Booth Operator roles use the web platform exclusively. These roles may input and manage voter data as part of their campaign responsibilities. All data is stored in Google Firestore and governed by Firebase's privacy terms.</p>
+    <p><strong>For web platform users (non-App Store):</strong> Admin, Candidate, Agent, and Booth Operator roles use the web platform exclusively. These roles may input and manage participant data as part of their event management responsibilities. All data is stored in Google Firestore and governed by Firebase's privacy terms.</p>
+  </div>
+
+  <!-- 3b. PARTICIPANT DATA -->
+  <div class="section" id="data-accessed">
+    <h2><span class="ico">👤</span> 3b. Participant Data Accessed by the Monitor App</h2>
+    <p>To perform their role, monitors access a participant list that may include the following fields, as provided by the event organizer:</p>
+    <ul>
+      <li><strong>Full name</strong></li>
+      <li><strong>ID number</strong> (e.g. student ID, national ID, membership number)</li>
+      <li><strong>Residential or registered address</strong></li>
+      <li><strong>Assigned voting or event location</strong></li>
+    </ul>
+    <p>This data is provided by the event organizer and is not collected by VoteTrack independently. <strong>VoteTrack acts as a data processor; the event organizer is the data controller</strong> for this information.</p>
+    <p>This participant data is temporarily stored on the monitor's device in encrypted local storage for offline use. It is automatically and permanently deleted when the monitor logs out or deletes their account.</p>
   </div>
 
   <!-- 4. HOW USED -->
@@ -358,15 +378,15 @@ footer{
   <!-- 6. DATA RETENTION -->
   <div class="section" id="data-retention">
     <h2><span class="ico">🗓️</span> 6. Data Retention</h2>
-    <p>Account credentials (email/username) are retained for as long as your access to VoteTrack is active. When an election administrator removes your access, your authentication record is deleted.</p>
-    <p>Election data (voter records, pledge information, vote counts) is retained by the election administrator for the duration they manage it within the platform. Monitors have no ability to export, download, or retain any data they view.</p>
+    <p>Account credentials (email/username) are retained for as long as your access to VoteTrack is active. When an event organizer removes your access, your authentication record is deleted.</p>
+    <p>Participant data is temporarily cached on the monitor's device for offline use. This local cache is automatically deleted when the monitor logs out or deletes their account. Check-in records written by monitors are retained by the event organizer for the duration they manage the event.</p>
     <p>Crash diagnostics (if collected) are retained for a maximum of <strong>90 days</strong> by Firebase Crashlytics, after which they are automatically deleted.</p>
   </div>
 
   <!-- 7. CHILDREN -->
   <div class="section" id="children">
     <h2><span class="ico">👶</span> 7. Children's Privacy</h2>
-    <p>VoteTrack is not directed at children under the age of <strong>17</strong>. We do not knowingly collect personal information from anyone under 17. Access to VoteTrack is restricted to authorised campaign personnel, all of whom must be adults.</p>
+    <p>VoteTrack is not directed at children under the age of <strong>13</strong> (in accordance with the Children's Online Privacy Protection Act, COPPA). We do not knowingly collect personal information from anyone under 13. Access to VoteTrack is restricted to authorised organizational personnel, all of whom must be adults.</p>
     <p>If you believe a child has been granted access in error, please contact us immediately at <a href="mailto:dave@votetrack.net" style="color:var(--accent2)">dave@votetrack.net</a> and we will take immediate action to remove their access.</p>
   </div>
 
@@ -378,7 +398,7 @@ footer{
       <li><strong>Firebase Authentication</strong> — industry-standard secure authentication with encrypted credential storage</li>
       <li><strong>Firestore Security Rules</strong> — role-based access control ensuring each user can only access data appropriate to their role</li>
       <li><strong>HTTPS / TLS encryption</strong> — all data in transit is encrypted</li>
-      <li><strong>No local data storage</strong> — the Monitor app does not cache or persist any election data on your device</li>
+      <li><strong>Local data encryption</strong> — participant data temporarily cached on-device is stored using the device's secure encrypted local storage (iOS Data Protection). This cache is cleared automatically on logout or account deletion.</li>
     </ul>
     <p>No method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
   </div>
@@ -395,7 +415,15 @@ footer{
       <li><strong>Right to data portability</strong> — request your data in a portable format</li>
     </ul>
     <p>To exercise any of these rights, please contact us at <a href="mailto:dave@votetrack.net" style="color:var(--accent2)">dave@votetrack.net</a>. We will respond within <strong>30 days</strong>.</p>
-    <p>Note: as the Monitor role does not store personal data on your device beyond your login credentials, most of these rights apply to the authentication record held by Firebase only.</p>
+
+    <div class="highlight" style="margin-top:20px">
+      <strong>In-App Account Deletion (Apple App Store — iOS)</strong><br><br>
+      You may delete your VoteTrack account directly within the app without contacting us:<br><br>
+      1. Tap your <strong>profile icon</strong> (top right of the Monitor screen)<br>
+      2. Scroll to <strong>Danger Zone</strong><br>
+      3. Tap <strong>Delete Account</strong> and confirm with your password<br><br>
+      This action permanently and immediately deletes your Firebase authentication record, your user profile document, and all locally cached participant data from your device. <strong>This cannot be undone.</strong>
+    </div>
   </div>
 
   <!-- 10. CHANGES -->
