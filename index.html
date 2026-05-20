@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>VoteTrack — Win Every Vote. In Real Time.</title>
+<title>VoteTrack — Group Voting & Event Check-In</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
@@ -662,10 +662,10 @@ footer{
   <div class="hero-orb orb3"></div>
   <div class="container">
     <div class="live-badge">
-      <span class="live-dot"></span> Live election management platform
+      <span class="live-dot"></span> Organizational voting made simple
     </div>
-    <h1>Win Every Vote.<br/><span class="grad">In Real Time.</span></h1>
-    <p>VoteTrack gives your entire campaign team — from the war room to the last polling booth — complete live visibility into every voter, pledge, and vote cast.</p>
+    <h1>Run Any Vote.<br/><span class="grad">Track Every Result.</span></h1>
+    <p>VoteTrack gives your entire organizing team complete live visibility into every member, pledge, and vote — built for universities, clubs, associations, and NGOs.</p>
     <div class="hero-btns">
       <a href="mailto:dave@votetrack.net" class="btn btn-accent">✉️ Request Access</a>
       <a href="#how" class="btn btn-outline">See How It Works ↓</a>
@@ -678,24 +678,24 @@ footer{
           <div class="brdot" style="background:#ef4444"></div>
           <div class="brdot" style="background:#f59e0b"></div>
           <div class="brdot" style="background:#10b981"></div>
-          <div class="br-url">votetrack.web.app/candidate/dashboard</div>
+          <div class="br-url">votetrack.web.app/organizer/dashboard</div>
           <span style="font-size:10px;font-weight:700;color:var(--green);white-space:nowrap">● LIVE</span>
         </div>
         <div class="browser-body">
 
           <!-- Stats -->
           <div class="mock-stats">
-            <div class="mst"><div class="mst-val" style="color:#818cf8">4,821</div><div class="mst-lbl">Total Voters</div></div>
-            <div class="mst"><div class="mst-val" style="color:#10b981">2,346</div><div class="mst-lbl">Pledged ✓</div></div>
+            <div class="mst"><div class="mst-val" style="color:#818cf8">4,821</div><div class="mst-lbl">Total Members</div></div>
+            <div class="mst"><div class="mst-val" style="color:#10b981">2,346</div><div class="mst-lbl">Confirmed ✓</div></div>
             <div class="mst"><div class="mst-val" style="color:#f59e0b">1,109</div><div class="mst-lbl">Undecided</div></div>
-            <div class="mst"><div class="mst-val" style="color:#ef4444">312</div><div class="mst-lbl">Voted Today</div></div>
+            <div class="mst"><div class="mst-val" style="color:#ef4444">312</div><div class="mst-lbl">Checked In</div></div>
           </div>
 
           <!-- Chart -->
           <div class="mock-chart">
-            <div class="mc-hd">Pledge Breakdown by District</div>
+            <div class="mc-hd">Support Breakdown by Group</div>
             <div class="brow">
-              <div class="blbl">East District</div>
+              <div class="blbl">East Campus</div>
               <div class="btrack">
                 <div class="bseg" style="width:52%;background:#6366f1"></div>
                 <div class="bseg" style="width:18%;background:#10b981"></div>
@@ -704,7 +704,7 @@ footer{
               </div>
             </div>
             <div class="brow">
-              <div class="blbl">Central City</div>
+              <div class="blbl">Main Hall</div>
               <div class="btrack">
                 <div class="bseg" style="width:40%;background:#6366f1"></div>
                 <div class="bseg" style="width:24%;background:#10b981"></div>
@@ -713,7 +713,7 @@ footer{
               </div>
             </div>
             <div class="brow">
-              <div class="blbl">West Region</div>
+              <div class="blbl">West Block</div>
               <div class="btrack">
                 <div class="bseg" style="width:61%;background:#6366f1"></div>
                 <div class="bseg" style="width:12%;background:#10b981"></div>
@@ -722,8 +722,8 @@ footer{
               </div>
             </div>
             <div class="mc-legend">
-              <div class="lpill" style="background:rgba(99,102,241,.12);color:#818cf8"><div class="lpdot" style="background:#6366f1"></div>Rivera · 2,346</div>
-              <div class="lpill" style="background:rgba(16,185,129,.1);color:#10b981"><div class="lpdot" style="background:#10b981"></div>Parker · 841</div>
+              <div class="lpill" style="background:rgba(99,102,241,.12);color:#818cf8"><div class="lpdot" style="background:#6366f1"></div>Ali Hassan · 2,346</div>
+              <div class="lpill" style="background:rgba(16,185,129,.1);color:#10b981"><div class="lpdot" style="background:#10b981"></div>Sara Ahmed · 841</div>
               <div class="lpill" style="background:rgba(245,158,11,.1);color:#f59e0b"><div class="lpdot" style="background:#f59e0b"></div>Undecided · 1,109</div>
               <div class="lpill" style="background:rgba(239,68,68,.1);color:#ef4444"><div class="lpdot" style="background:#ef4444"></div>No · 525</div>
             </div>
@@ -735,32 +735,32 @@ footer{
               <div class="mcard-hd">Recent Activity</div>
               <div class="arow">
                 <div class="avt" style="background:rgba(99,102,241,.15);color:#818cf8">JC</div>
-                <div><div class="aname">James Carter</div><div class="ameta">Pledge → Rivera · East District</div></div>
+                <div><div class="aname">James Carter</div><div class="ameta">Support → Ali Hassan · East Campus</div></div>
                 <div class="atime">2m ago</div>
               </div>
               <div class="arow">
                 <div class="avt" style="background:rgba(16,185,129,.15);color:#10b981">SM</div>
-                <div><div class="aname">Sarah Mitchell</div><div class="ameta">Voted ✓ · Central City</div></div>
+                <div><div class="aname">Sarah Mitchell</div><div class="ameta">Checked In ✓ · Main Hall</div></div>
                 <div class="atime">5m ago</div>
               </div>
               <div class="arow">
                 <div class="avt" style="background:rgba(139,92,246,.15);color:#8b5cf6">DT</div>
-                <div><div class="aname">David Torres</div><div class="ameta">Phone updated · West Region</div></div>
+                <div><div class="aname">David Torres</div><div class="ameta">Contact updated · West Block</div></div>
                 <div class="atime">8m ago</div>
               </div>
             </div>
             <div class="mcard">
               <div class="mcard-hd">Agent Performance</div>
               <div class="agbar">
-                <div class="agbar-top"><span>Michael — East District</span><span style="color:#10b981;font-weight:700">84/100</span></div>
+                <div class="agbar-top"><span>Michael — East Campus</span><span style="color:#10b981;font-weight:700">84/100</span></div>
                 <div class="agbar-track"><div class="agbar-fill" style="width:84%;background:linear-gradient(90deg,#6366f1,#10b981)"></div></div>
               </div>
               <div class="agbar">
-                <div class="agbar-top"><span>Lisa — Central City</span><span style="color:#f59e0b;font-weight:700">61/90</span></div>
+                <div class="agbar-top"><span>Lisa — Main Hall</span><span style="color:#f59e0b;font-weight:700">61/90</span></div>
                 <div class="agbar-track"><div class="agbar-fill" style="width:67%;background:linear-gradient(90deg,#f59e0b,#6366f1)"></div></div>
               </div>
               <div class="agbar">
-                <div class="agbar-top"><span>Chris — West Region</span><span style="color:#818cf8;font-weight:700">112/130</span></div>
+                <div class="agbar-top"><span>Chris — West Block</span><span style="color:#818cf8;font-weight:700">112/130</span></div>
                 <div class="agbar-track"><div class="agbar-fill" style="width:86%;background:linear-gradient(90deg,#8b5cf6,#6366f1)"></div></div>
               </div>
             </div>
@@ -775,7 +775,7 @@ footer{
 <div class="stats-band">
   <div class="container">
     <div class="stats-row">
-      <div class="si reveal delay-1"><div class="si-num" data-target="50">0<span>K+</span></div><div class="si-lbl">Voters Managed</div></div>
+      <div class="si reveal delay-1"><div class="si-num" data-target="50">0<span>K+</span></div><div class="si-lbl">Members Managed</div></div>
       <div class="si reveal delay-2"><div class="si-num"><span>∞</span></div><div class="si-lbl">Real-Time Updates</div></div>
       <div class="si reveal delay-3"><div class="si-num">5</div><div class="si-lbl">User Roles</div></div>
       <div class="si reveal delay-4"><div class="si-num"><span>0</span>ms</div><div class="si-lbl">Install Required</div></div>
@@ -788,29 +788,29 @@ footer{
   <div class="container">
     <div class="reveal">
       <div class="label">👥 User Roles</div>
-      <h2 class="h2">Built for every member<br/>of your campaign team</h2>
+      <h2 class="h2">Built for every member<br/>of your organization</h2>
       <p class="sub">One platform, four powerful roles. Everyone sees exactly what they need.</p>
     </div>
     <div class="roles-grid">
       <div class="role-card reveal delay-1">
         <div class="role-icon" style="background:rgba(16,185,129,.1)">🏅</div>
         <div class="role-title">Candidate</div>
-        <div class="role-desc">See your live pledge breakdown, approve field agent updates, track turnout by area, and monitor your team in real time.</div>
+        <div class="role-desc">See your live support breakdown, approve field agent updates, track participation by group, and monitor your team in real time.</div>
       </div>
       <div class="role-card reveal delay-2">
         <div class="role-icon" style="background:rgba(245,158,11,.1)">🧑‍💼</div>
         <div class="role-title">Field Agent</div>
-        <div class="role-desc">View assigned voters, submit pledge updates, correct phone numbers, and reassign voters — all from your phone, no app install needed.</div>
+        <div class="role-desc">View assigned members, submit support updates, correct contact details, and reassign members — all from your phone, no app install needed.</div>
       </div>
       <div class="role-card reveal delay-3">
         <div class="role-icon" style="background:rgba(139,92,246,.1)">🗳️</div>
-        <div class="role-title">Booth Operator</div>
-        <div class="role-desc">Mark voters as voted in real time at the polling station with a fast, searchable voter list. Zero training required.</div>
+        <div class="role-title">Check-In Operator</div>
+        <div class="role-desc">Mark members as checked in at the voting station with a fast, searchable member list. Zero training required.</div>
       </div>
       <div class="role-card reveal delay-4">
         <div class="role-icon" style="background:rgba(6,182,212,.1)">👁️</div>
         <div class="role-title">Monitor</div>
-        <div class="role-desc">Read-only live view of voter turnout and activity logs — built for observers, auditors, and transparency oversight.</div>
+        <div class="role-desc">Live view of member participation and activity — track check-ins and turnout at your assigned location in real time.</div>
       </div>
     </div>
   </div>
@@ -821,28 +821,28 @@ footer{
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
       <div class="label">⚡ Features</div>
-      <h2 class="h2">Everything your campaign needs,<br/>nothing it doesn't.</h2>
+      <h2 class="h2">Everything your organization needs,<br/>nothing it doesn't.</h2>
     </div>
     <div class="feats-grid">
       <div class="fc reveal delay-1">
         <div class="fi">📊</div>
-        <div class="fc-title">Live Pledge Tracking</div>
-        <div class="fc-desc">Colour-coded pledge dashboard updated the instant an agent submits. Know who supports which candidate across every area, live.</div>
+        <div class="fc-title">Live Support Tracking</div>
+        <div class="fc-desc">Colour-coded support dashboard updated the instant an agent submits. Know who supports which candidate across every group, live.</div>
       </div>
       <div class="fc reveal delay-2">
         <div class="fi">🗂️</div>
-        <div class="fc-title">Master Voter Database</div>
-        <div class="fc-desc">Import thousands of voters via Google Sheets sync. Filter by area, party, and constituency instantly. Deduplicated by NID.</div>
+        <div class="fc-title">Member Database</div>
+        <div class="fc-desc">Import your member list from Google Sheets. Filter by area and group instantly. Deduplicated by member ID for a clean, accurate list.</div>
       </div>
       <div class="fc reveal delay-3">
         <div class="fi">🎯</div>
-        <div class="fc-title">Smart Election Builder</div>
-        <div class="fc-desc">Create elections with custom areas, party filters, per-candidate colours, and voter auto-assignment by region — set up in minutes.</div>
+        <div class="fc-title">Smart Voting Event Builder</div>
+        <div class="fc-desc">Create voting events with custom groups, candidate options, per-candidate colours, and member auto-assignment by area — set up in minutes.</div>
       </div>
       <div class="fc reveal delay-1">
         <div class="fi">🔄</div>
         <div class="fc-title">Re-sync on Demand</div>
-        <div class="fc-desc">Party changed? Voter moved? Re-sync and VoteTrack automatically adds new matches and removes those who no longer qualify — even on live elections.</div>
+        <div class="fc-desc">Member list updated? Re-sync and VoteTrack automatically adds new members and removes those who no longer qualify — even on live events.</div>
       </div>
       <div class="fc reveal delay-2">
         <div class="fi">📱</div>
@@ -852,7 +852,7 @@ footer{
       <div class="fc reveal delay-3">
         <div class="fi">✅</div>
         <div class="fc-title">Approval Workflow</div>
-        <div class="fc-desc">Agents submit requests; candidates approve or reject them. Phone corrections write to the database the instant they're approved.</div>
+        <div class="fc-desc">Agents submit updates; organizers approve or reject them. Contact corrections write to the database the instant they're approved.</div>
       </div>
     </div>
   </div>
@@ -863,23 +863,23 @@ footer{
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:580px;margin:0 auto">
       <div class="label">🚀 How It Works</div>
-      <h2 class="h2">From setup to election day<br/>in 3 steps</h2>
+      <h2 class="h2">From setup to voting day<br/>in 3 steps</h2>
     </div>
     <div class="steps">
       <div class="step reveal delay-1">
         <div class="step-n">1</div>
-        <div class="step-title">Build Your Voter List</div>
-        <div class="step-desc">Import master voter data from Google Sheets. VoteTrack maps every voter by NID, area, and party — ready to filter and assign instantly.</div>
+        <div class="step-title">Build Your Member List</div>
+        <div class="step-desc">Import your member data from Google Sheets. VoteTrack maps every member by ID, group, and area — ready to filter and assign instantly.</div>
       </div>
       <div class="step reveal delay-2">
         <div class="step-n">2</div>
         <div class="step-title">Create & Assign</div>
-        <div class="step-desc">Set up elections, assign field agents to areas, and let the system auto-assign voters. Configure candidate colours and pledge categories your way.</div>
+        <div class="step-desc">Set up your voting event, assign field agents to groups, and let the system auto-assign members. Configure candidate options and categories your way.</div>
       </div>
       <div class="step reveal delay-3">
         <div class="step-n">3</div>
         <div class="step-title">Go Live</div>
-        <div class="step-desc">Booth operators mark votes. Agents update pledges. Candidates watch the live dashboard. Every change syncs across all devices instantly.</div>
+        <div class="step-desc">Check-in operators mark participation. Agents collect support data. Candidates watch the live dashboard. Every change syncs across all devices instantly.</div>
       </div>
     </div>
   </div>
@@ -892,13 +892,13 @@ footer{
       <div class="agent-text reveal-left">
         <div class="label">📱 Agent Experience</div>
         <h2>Your agents work<br/>from their phones.<br/>You see it <span class="grad">live.</span></h2>
-        <p>Field agents open VoteTrack in any mobile browser — no download, no install. They update pledges, fix phone numbers, and reassign voters on the ground. Every change hits your dashboard instantly.</p>
+        <p>Field agents open VoteTrack in any mobile browser — no download, no install. They update support info, fix contact details, and reassign members on the go. Every change hits your dashboard instantly.</p>
         <div class="checks">
-          <div class="chk"><div class="chk-ico">✓</div><span>Colour-coded pledge chips per candidate — tap to select</span></div>
-          <div class="chk"><div class="chk-ico">✓</div><span>Submit comments, phone corrections, and care-of info</span></div>
-          <div class="chk"><div class="chk-ico">✓</div><span>Reassign voters to any agent in the election</span></div>
-          <div class="chk"><div class="chk-ico">✓</div><span>One-tap call button for every voter with a number</span></div>
-          <div class="chk"><div class="chk-ico">✓</div><span>My Voters + All Voters tabs with area and status filters</span></div>
+          <div class="chk"><div class="chk-ico">✓</div><span>Colour-coded support chips per candidate — tap to select</span></div>
+          <div class="chk"><div class="chk-ico">✓</div><span>Submit comments, contact corrections, and notes</span></div>
+          <div class="chk"><div class="chk-ico">✓</div><span>Reassign members to any agent in the event</span></div>
+          <div class="chk"><div class="chk-ico">✓</div><span>One-tap call button for every member with a number</span></div>
+          <div class="chk"><div class="chk-ico">✓</div><span>My Members + All Members tabs with group and status filters</span></div>
         </div>
       </div>
 
@@ -909,7 +909,7 @@ footer{
             <div class="ph-bar">
               <div>
                 <div class="ph-name">Michael Chen</div>
-                <div class="ph-sub">City Council Election 2025</div>
+                <div class="ph-sub">CS Society Election 2025</div>
               </div>
               <div>
                 <div class="ph-voted">18<span style="color:rgba(255,255,255,.3);font-weight:400;font-size:10px">/42</span></div>
@@ -922,17 +922,17 @@ footer{
                 <div class="ph-ava" style="background:rgba(99,102,241,.15)">👤</div>
                 <div style="flex:1">
                   <div class="ph-vname">Maria Garcia</div>
-                  <div class="ph-vmeta">ID #4821 · East District</div>
+                  <div class="ph-vmeta">ID #4821 · East Campus</div>
                 </div>
                 <div style="font-size:17px;cursor:pointer">📞</div>
               </div>
               <div class="ph-plbl">Pledge</div>
               <div class="ph-chips">
                 <div class="phchip" style="background:rgba(99,102,241,.18);color:#818cf8;border-color:#6366f1">
-                  <div class="phdot" style="background:#6366f1"></div>Rivera
+                  <div class="phdot" style="background:#6366f1"></div>Ali Hassan
                 </div>
                 <div class="phchip" style="background:var(--bg3);color:var(--soft);border-color:var(--border)">
-                  <div class="phdot" style="background:#10b981;opacity:.4"></div>Parker
+                  <div class="phdot" style="background:#10b981;opacity:.4"></div>Sara Ahmed
                 </div>
                 <div class="phchip" style="background:var(--bg3);color:var(--soft);border-color:var(--border)">
                   <div class="phdot" style="background:#f59e0b;opacity:.4"></div>Undecided
@@ -957,7 +957,7 @@ footer{
             <div class="ph-mini">
               <div class="ph-ava" style="font-size:12px">👤</div>
               <div><div style="font-size:11px;font-weight:700">Chris Johnson</div><div style="font-size:9px;color:var(--soft)">ID #7041</div></div>
-              <div class="ph-mbadge" style="background:rgba(99,102,241,.12);color:#818cf8">Rivera</div>
+              <div class="ph-mbadge" style="background:rgba(99,102,241,.12);color:#818cf8">Ali Hassan</div>
             </div>
           </div>
         </div>
@@ -977,7 +977,7 @@ footer{
       <div class="sec-card reveal delay-1">
         <span class="sec-ico">🔐</span>
         <div class="sec-title">Firebase-Backed</div>
-        <div class="sec-desc">Data lives in Google Firestore with role-based access rules. Agents see only their voters. Candidates see only their election.</div>
+        <div class="sec-desc">Data lives in Google Firestore with role-based access rules. Agents see only their assigned members. Each user sees only their own event.</div>
       </div>
       <div class="sec-card reveal delay-2">
         <span class="sec-ico">⚡</span>
@@ -1000,8 +1000,8 @@ footer{
       <div class="cta-orb1"></div>
       <div class="cta-orb2"></div>
       <div class="cta-orb3"></div>
-      <h2>Ready to run a<br/><span class="grad">smarter campaign?</span></h2>
-      <p>VoteTrack is trusted by campaign teams around the world.<br/>Get set up in minutes — your first election is free.</p>
+      <h2>Ready to run<br/><span class="grad">your next vote?</span></h2>
+      <p>VoteTrack is trusted by universities, clubs, and organizations around the world.<br/>Get set up in minutes — your first event is free.</p>
       <a href="mailto:dave@votetrack.net" class="btn btn-accent">✉️ Request Access →</a>
     </div>
   </div>
@@ -1013,7 +1013,7 @@ footer{
     <div class="footer-inner">
       <div>
         <div class="flogo"><div class="flogo-ico">🗳️</div>VoteTrack</div>
-        <div class="ftag">Win Every Vote. In Real Time.</div>
+        <div class="ftag">Group Voting, Made Simple.</div>
       </div>
       <div class="flinks">
         <a href="#features">Features</a>
